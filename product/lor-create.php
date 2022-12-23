@@ -2,7 +2,11 @@
 // session_start();
 include('conn_db.php');
 require '../buyer/conn_db.php';
-
+// 
+if (!isset($_SESSION["inst_user_id"])) {
+  header("location:login.php");
+}
+// 
 $servername = "localhost";
 $username = "root";
 $password = "";
