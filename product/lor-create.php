@@ -1,5 +1,6 @@
 <?php
 // session_start();
+include('conn_db.php');
 require '../buyer/conn_db.php';
 
 $servername = "localhost";
