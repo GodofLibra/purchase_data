@@ -173,7 +173,7 @@ if(isset($_POST["reg_inst"]))
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
       <img src="assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Super Admin
+      Recommendation Latter System
     </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -230,7 +230,7 @@ if(isset($_POST["reg_inst"]))
   <button type="submit" class="btn btn-primary" name="reg_inst" id="reg_inst">Create</button>
   <?php echo $message; ?>
 </form>
-  </div>
+  </div> 
 </main>
 
 <footer class="footer mt-auto py-3 bg-light">
@@ -241,7 +241,7 @@ if(isset($_POST["reg_inst"]))
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+   
       
   </body>
 </html>

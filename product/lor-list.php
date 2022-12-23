@@ -15,6 +15,39 @@
     <title>Student CRUD</title>
 </head>
 <body>
+<header>
+  <!-- Fixed navbar -->
+  <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+      <img src="assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <?php echo $user1 = end($user); ?>
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="../product/lor-list.php">Lor Items</a>
+          </li>
+         
+           <form class="form-inline" action="logout.php" style=" margin-left: 53.5em;">
+      <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+</header>
   
     <div class="container mt-4">
 
@@ -25,7 +58,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>LOR Details
-                            <a href="lor-create.php" class="btn btn-primary float-end">Add LOr</a>
+                             <a href="..//buyer/index.php" class="btn btn-danger float-end">BACK</a>
+                            <!--<a href="lor-create.php" class="btn btn-primary float-end">Add LOr</a>-->
                         </h4>
                     </div>
                     <div class="card-body">

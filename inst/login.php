@@ -89,7 +89,7 @@ $query = "
 						<div class="form-group">
 							<input type="submit" name="login" value="Login" class="btn btn-info" />
 						</div>
-						
+						<a href="../admin.php">Home Page</a>
 
 					</form>
 
