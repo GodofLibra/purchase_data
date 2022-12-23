@@ -5,7 +5,8 @@ require 'database/dbcon.php';
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +16,9 @@ require 'database/dbcon.php';
 
     <title>LOR Edit</title>
 </head>
+
 <body>
-  
+
     <div class="container mt-5">
 
         <?php include('message.php'); ?>
@@ -32,43 +34,41 @@ require 'database/dbcon.php';
                     <div class="card-body">
 
                         <?php
-                        if(isset($_GET['id']))
-                        {
+                        if (isset($_GET['id'])) {
                             $student_id = mysqli_real_escape_string($con, $_GET['id']);
                             $query = "SELECT * FROM students WHERE id='$student_id' ";
                             $query_run = mysqli_query($con, $query);
 
-                            if(mysqli_num_rows($query_run) > 0)
-                            {
+                            if (mysqli_num_rows($query_run) > 0) {
                                 $student = mysqli_fetch_array($query_run);
-                                ?>
+                        ?>
                                 <form action="update-lor.php" method="POST">
                                     <input type="hidden" name="student_id" value="<?= $student['id']; ?>">
 
                                     <div class="mb-3">
                                         <label>Student Name</label>
-                                        <input type="text" name="name" value="<?=$student['studentname'];?>" class="form-control">
+                                        <input type="text" name="name" value="<?= $student['studentname']; ?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Student Email</label>
-                                        <input type="email" name="studentemail" value="<?=$student['studentemail'];?>" class="form-control">
+                                        <input type="email" name="studentemail" value="<?= $student['studentemail']; ?>" class="form-control">
                                     </div>
-                                     <div class="mb-3">
+                                    <div class="mb-3">
                                         <label>Faculty Email</label>
-                                        <input type="email" name="facultyemail" value="<?=$student['facultyemail'];?>" class="form-control">
+                                        <input type="email" name="facultyemail" value="<?= $student['facultyemail']; ?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Enrollement Number</label>
-                                        <input type="text" name="enrollementnumber" value="<?=$student['enrollementnumber'];?>" class="form-control">
+                                        <input type="text" name="enrollementnumber" value="<?= $student['enrollementnumber']; ?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Student Course</label>
-                                        <input type="text" name="course" value="<?=$student['course'];?>" class="form-control">
+                                        <input type="text" name="course" value="<?= $student['course']; ?>" class="form-control">
                                     </div>
-                                     <div class="mb-3">
-                                     <label for="formFile" name="file" class="form-label">Default file input example</label>
-                                     <input class="form-control" type="file" id="formFile">
-                                     </div>
+                                    <div class="mb-3">
+                                        <label for="formFile" name="file" class="form-label">Default file input example</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                    </div>
                                     <div class="mb-3">
                                         <button type="submit" name="update_student" class="btn btn-primary">
                                             Update LOR
@@ -76,10 +76,8 @@ require 'database/dbcon.php';
                                     </div>
 
                                 </form>
-                                <?php
-                            }
-                            else
-                            {
+                        <?php
+                            } else {
                                 echo "<h4>No Such Id Found</h4>";
                             }
                         }
@@ -92,4 +90,5 @@ require 'database/dbcon.php';
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
