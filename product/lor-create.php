@@ -18,6 +18,7 @@ $result = $conn->query($sql);
 <!doctype html>
 <html lang="en">
   <head>
+  
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +29,38 @@ $result = $conn->query($sql);
     <title>Lor Create</title>
 </head>
 <body>
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+      <img src="assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <!--<?php echo $user1 = end($user); ?>-->
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse" >
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../inst/index.php">Home</a>
+          </li>
+          
+        
+         <form class="form-inline" action="../inst/logout.php" style=" margin-left: 51em;">
+      <button type="submit" class="btn btn-danger float-end">Logout</button>
+     
+    </form>
+        </ul>
+        <!--<form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>-->
+      </div>
+    </div>
+  </nav>
+</header>
   
     <div class="container mt-5">
 
@@ -38,7 +71,7 @@ $result = $conn->query($sql);
                 <div class="card">
                     <div class="card-header">
                         <h4>LOR Add 
-                            <a href="index.php" class="btn btn-danger float-end">BACK</a>
+                           
                         </h4>
                     </div>
                     <div class="card-body">
@@ -83,7 +116,7 @@ $result = $conn->query($sql);
                             <input class="form-control" type="file" name="file" id="formFile">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_student" class="btn btn-primary">Save Student Lor</button>
+                                <button type="submit" name="save_student" class="btn btn-primary">Send Lor</button>
                             </div>
 
                         </form>
